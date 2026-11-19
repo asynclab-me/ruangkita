@@ -1,165 +1,132 @@
-🌐 RuangKita
+<div align="center">
 
-Ide Sederhana, Langkah Luar Biasa.
+# 🌐 RuangKita
 
-RuangKita adalah project website landing page sederhana, modern, responsif, dan ringan yang dibangun menggunakan HTML, CSS, dan JavaScript murni.
+**Ide Sederhana, Langkah Luar Biasa.**
 
-Project ini dirancang sebagai ruang digital untuk memperkenalkan identitas, berbagi informasi, menampilkan layanan, serta membangun kehadiran online secara profesional.
+[![Live Website](https://img.shields.io/badge/Live_Demo-ruangkita--4u.pages.dev-101d35?style=for-the-badge&logo=cloudflarepages&logoColor=white)](https://ruangkita-4u.pages.dev/)
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](#)
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](#)
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](#)
+[![License: MIT](https://img.shields.io/badge/License-MIT-2ea44f?style=for-the-badge)](./LICENSE)
 
----
+[Kunjungi Website](https://ruangkita-4u.pages.dev/) · [Laporkan Bug](https://github.com/USERNAME/RuangKita/issues) · [Ajukan Fitur](https://github.com/USERNAME/RuangKita/issues)
 
-✨ Fitur Utama
-
-- 📱 Responsive Design — Tampilan menyesuaikan perangkat mobile, tablet, dan desktop.
-- 🎨 Modern Interface — Desain minimalis, bersih, dan nyaman dilihat.
-- 🧭 Simple Navigation — Navigasi yang mudah digunakan.
-- 🏠 Homepage — Halaman utama untuk memperkenalkan website.
-- 👤 About Section — Informasi mengenai profil dan identitas.
-- 🚀 Services Section — Menampilkan layanan atau penawaran.
-- 📩 Contact Section — Memudahkan pengunjung menghubungi pengelola.
-- ⚡ Lightweight — Tidak memerlukan framework atau database.
-- 🌍 Easy Deployment — Dapat dipublikasikan melalui hosting statis.
+</div>
 
 ---
 
-🛠️ Teknologi
+## 📖 Tentang Project
 
-Project ini menggunakan teknologi dasar pengembangan website:
+**RuangKita** adalah website *landing page* single-page yang dirancang dengan pendekatan minimalis, modern, ringan, dan responsif. Dibangun menggunakan teknologi web fundamental tanpa *framework* tambahan untuk memastikan kecepatan akses maksimal dan optimasi mesin pencari (SEO) yang optimal.
 
-Teknologi| Fungsi
-HTML5| Struktur halaman
-CSS3| Tampilan dan desain
-JavaScript| Interaksi sederhana
-
-Tidak membutuhkan instalasi framework tambahan.
+🔗 **Alamat Resmi:** [https://ruangkita-4u.pages.dev/](https://ruangkita-4u.pages.dev/)
 
 ---
 
-📂 Struktur Project
+## ✨ Fitur Utama
 
+- **📱 Fully Responsive Design** — Tata letak otomatis menyesuaikan layar *mobile*, tablet, hingga desktop.
+- **⚡ Ultra-Lightweight** — Dibangun dengan HTML, CSS, dan JavaScript murni tanpa dependensi eksternal sehingga *loading* instan.
+- **🧭 Smooth Single-Page Navigation** — Navigasi halus antar bagian (`#home`, `#about`, `#services`, `#contact`).
+- **🔍 SEO & Search Engine Ready** — Dilengkapi tag *canonical*, Open Graph, JSON-LD Structured Data, `robots.txt`, dan `sitemap.xml`.
+- **☁️ Automated CI/CD Deployment** — Terintegrasi langsung dengan **Cloudflare Pages** untuk pembaruan otomatis setiap kali ada perubahan kode.
+
+---
+
+## 🛠️ Teknologi yang Digunakan
+
+| Teknologi | Peran & Fungsi |
+| :--- | :--- |
+| **HTML5** | Struktur semantik halaman dan metadata SEO |
+| **CSS3** | Styling modern, CSS Grid, Flexbox, dan *responsive media queries* |
+| **JavaScript (ES6)** | Pembaruan tahun hak cipta dinamis dan interaktivitas ringan |
+| **Cloudflare Pages** | Hosting statis dengan jaringan CDN global dan SSL otomatis |
+
+---
+
+## 📂 Struktur Repository
+
+```text
 RuangKita/
-│
-├── index.html
-└── README.md
+├── index.html      # Halaman utama single-page
+├── robots.txt      # Instruksi crawling untuk mesin pencari
+├── sitemap.xml     # Peta situs resmi untuk Google Search Console
+├── LICENSE         # Dokumen lisensi MIT
+├── .gitignore      # Daftar file/folder yang diabaikan Git
+└── README.md       # Dokumentasi utama repository
+```
 
 ---
 
-🚀 Cara Menjalankan Project
+## 🚀 Menjalankan Project Secara Lokal
 
-1. Clone Repository
+Jika ingin mengunduh dan menjalankan project ini di komputer lokal:
 
-git clone https://github.com/USERNAME/RuangKita.git
+1. **Clone repository ini**
+   ```bash
+   git clone [https://github.com/USERNAME/RuangKita.git](https://github.com/USERNAME/RuangKita.git)
+   ```
 
-2. Masuk ke Folder Project
+2. **Masuk ke direktori project**
+   ```bash
+   cd RuangKita
+   ```
 
-cd RuangKita
-
-3. Jalankan Website
-
-Buka file "index.html" menggunakan browser seperti:
-
-- Google Chrome
-- Mozilla Firefox
-- Microsoft Edge
-- Safari
-
-Website dapat langsung dijalankan tanpa konfigurasi server khusus.
+3. **Buka di browser**
+   Klik dua kali file `index.html` atau jalankan menggunakan ekstensi **Live Server** di Visual Studio Code.
 
 ---
 
-🌍 Cara Publikasi Website
+## 🌍 Deployment (Cloudflare Pages)
 
-Project ini dapat dipublikasikan secara gratis menggunakan beberapa layanan hosting.
+Website ini di-host secara gratis menggunakan **Cloudflare Pages** yang terhubung langsung dengan repository GitHub:
 
-GitHub Pages
-
-1. Upload seluruh file project ke repository GitHub.
-2. Buka menu Settings.
-3. Pilih Pages.
-4. Pilih branch "main" dan folder "/root".
-5. Simpan konfigurasi.
-6. Tunggu proses publikasi selesai.
-
-Netlify
-
-1. Buka https://www.netlify.com/
-2. Login atau buat akun.
-3. Upload folder project.
-4. Tunggu proses deployment.
-5. Website akan mendapatkan alamat publik.
+1. Hubungkan repository **RuangKita** ke akun Cloudflare Pages.
+2. Gunakan konfigurasi build berikut:
+   - **Production branch:** `main`
+   - **Build command:** *(kosongkan)*
+   - **Build output directory:** `/`
+3. Setiap perubahan yang di-*push* ke branch `main` akan otomatis di-deploy dalam hitungan detik.
 
 ---
 
-🎯 Tujuan Pengembangan
+## 🔮 Roadmap Pengembangan
 
-RuangKita dibuat sebagai fondasi awal untuk membangun platform digital yang dapat dikembangkan sesuai kebutuhan.
-
-Beberapa potensi pengembangan selanjutnya:
-
-- Sistem autentikasi pengguna.
-- Dashboard administrator.
-- Integrasi database.
-- Sistem artikel dan berita.
-- Katalog produk dan layanan.
-- Integrasi WhatsApp.
-- Sistem pendaftaran anggota.
-- Monetisasi melalui iklan atau layanan digital.
+- [x] Desain dan struktur *landing page* single-page responsif
+- [x] Navigasi antar-section (`Home`, `Tentang`, `Layanan`, `Kontak`)
+- [x] Optimasi SEO dasar, Open Graph, dan Schema.org
+- [x] Integrasi hosting dengan Cloudflare Pages
+- [ ] Penambahan formulir kontak interaktif
+- [ ] Integrasi tombol WhatsApp langsung
+- [ ] Pengembangan halaman blog / artikel
+- [ ] Penambahan mode gelap (*Dark Mode*)
 
 ---
 
-🔮 Roadmap
+## 🤝 Kontribusi
 
-- [x] Membuat landing page sederhana.
-- [x] Membuat desain responsif.
-- [x] Menambahkan navigasi website.
-- [x] Menambahkan bagian profil dan layanan.
-- [x] Menambahkan informasi kontak.
-- [x] Menyiapkan dokumentasi project.
-- [ ] Pengembangan dashboard admin.
-- [ ] Integrasi database.
-- [ ] Pengembangan sistem pengguna.
-- [ ] Integrasi layanan digital.
+Kontribusi, saran, maupun masukan sangat terbuka untuk pengembangan project ini:
+
+1. *Fork* repository ini.
+2. Buat *branch* fitur baru (`git checkout -b fitur-baru`).
+3. *Commit* perubahan kamu (`git commit -m "Menambahkan fitur baru"`).
+4. *Push* ke branch tersebut (`git push origin fitur-baru`).
+5. Buat **Pull Request**.
 
 ---
 
-🔐 Lisensi
+## 🔐 Lisensi
 
-Project ini dapat digunakan, dipelajari, dan dikembangkan lebih lanjut.
-
-Lisensi resmi dapat ditambahkan sesuai kebijakan pemilik repository.
+Project ini didistribusikan di bawah lisensi **MIT**. Lihat file [LICENSE](./LICENSE) untuk informasi selengkapnya.
 
 ---
 
-🤝 Kontribusi
+<div align="center">
 
-Kontribusi dan saran pengembangan sangat terbuka.
-
-Jika ingin berkontribusi:
-
-1. Fork repository ini.
-2. Buat branch baru.
-3. Lakukan perubahan.
-4. Kirim Pull Request.
-
-Setiap ide dan kontribusi positif sangat dihargai.
-
----
-
-📬 Kontak
-
-Project: RuangKita
-Kategori: Website Landing Page
-Teknologi: HTML, CSS, JavaScript
-Status: Initial Release
-
----
-
-<p align="center">🌟 RuangKita
-
-Ide Sederhana, Langkah Luar Biasa.
-
-Dibangun dengan semangat kreativitas dan inovasi digital.
+**🌟 RuangKita**  
+*Ide Sederhana, Langkah Luar Biasa.*
 
 © 2026 RuangKita. All Rights Reserved.
 
-</p>
+</div>
