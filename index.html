@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="RuangKita - Ide sederhana, langkah luar biasa.">
+  <title>RuangKita - Website Resmi</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Arial, sans-serif;
+      color: #17233b;
+      line-height: 1.6;
+      background: #f7f9fc;
+    }
+    header {
+      background: #101d35;
+      color: white;
+      padding: 20px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo { font-size: 24px; font-weight: bold; }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 22px;
+      font-size: 14px;
+    }
+    .hero {
+      background: linear-gradient(135deg, #101d35, #294b79);
+      color: white;
+      padding: 110px 8%;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: clamp(32px, 6vw, 54px);
+      margin-bottom: 18px;
+    }
+    .hero p {
+      max-width: 600px;
+      margin: auto;
+      color: #d6e2f3;
+    }
+    .btn {
+      display: inline-block;
+      background: #fff;
+      color: #101d35;
+      padding: 13px 25px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 28px;
+    }
+    section { padding: 75px 8%; text-align: center; }
+    section h2 { font-size: 32px; margin-bottom: 15px; }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+      max-width: 850px;
+      margin: 35px auto 0;
+    }
+    .card {
+      background: white;
+      padding: 35px 25px;
+      border-radius: 14px;
+      box-shadow: 0 5px 25px #15274410;
+    }
+    .card h3 { margin-bottom: 10px; }
+    .about { background: white; }
+    .contact { background: #eaf0f8; }
+    footer {
+      background: #101d35;
+      color: white;
+      text-align: center;
+      padding: 25px;
+    }
+    @media(max-width: 600px) {
+      header { padding: 18px 5%; }
+      nav a { margin-left: 10px; font-size: 12px; }
+      .hero { padding: 85px 6%; }
+      .cards { grid-template-columns: 1fr; }
+      section { padding: 60px 6%; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">RuangKita.</div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">Tentang</a>
+    <a href="#services">Layanan</a>
+    <a href="#contact">Kontak</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <h1>Ide Sederhana,<br>Langkah Luar Biasa.</h1>
+    <p>
+      Selamat datang di RuangKita.
+      Tempat untuk berbagi ide, kreativitas,
+      dan membangun masa depan yang lebih baik.
+    </p>
+    <a href="#about" class="btn">Mulai Jelajahi</a>
+  </section>
+
+  <section class="about" id="about">
+    <h2>Tentang Kami</h2>
+    <p>
+      RuangKita adalah ruang digital untuk
+      memperkenalkan ide, karya, dan informasi
+      secara sederhana dan menarik.
+    </p>
+  </section>
+
+  <section id="services">
+    <h2>Apa yang Kami Tawarkan?</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>💡 Ide Kreatif</h3>
+        <p>Mengembangkan inspirasi menjadi sesuatu
+        yang bermanfaat.</p>
+      </div>
+      <div class="card">
+        <h3>🚀 Pengembangan</h3>
+        <p>Mendorong ide menjadi karya nyata
+        dan inovatif.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>Hubungi Kami</h2>
+    <p>Punya pertanyaan atau ingin bekerja sama?</p>
+    <a class="btn" href="mailto:hello@example.com">
+      Kirim Email
+    </a>
+  </section>
+</main>
+
+<footer>
+  <p>© <span id="year"></span> RuangKita. All Rights Reserved.</p>
+</footer>
+
+<script>
+  document.getElementById("year").textContent =
+    new Date().getFullYear();
+</script>
+
+</body>
+</html>
