@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: [https://ruangkita-4u.pages.dev/sitemap.xml](https://ruangkita-4u.pages.dev/sitemap.xml)
