@@ -6,7 +6,7 @@
 document.getElementById("year").textContent = new Date().getFullYear();
 
 // --------------------------------------------------------------------------
-// 2. Innovation Project List Data
+// 2. Innovation Projects List Data
 // --------------------------------------------------------------------------
 const projects = [
   {
@@ -148,9 +148,6 @@ if (projectGrid) {
         onerror="this.style.display='none'"
       >
       <div class="project-content">
-        <span class="project-number">
-          PROJECT ${project.number}
-        </span>
         <h3>${project.title}</h3>
         <p>${project.description}</p>
         <div class="project-tags">
@@ -184,9 +181,6 @@ function showProject(index) {
       class="modal-image"
       onerror="this.style.display='none'"
     >
-    <span class="project-number">
-      PROJECT ${project.number}
-    </span>
     <h2>${project.title}</h2>
     <h3>Deskripsi Proyek</h3>
     <p>${project.description}</p>
