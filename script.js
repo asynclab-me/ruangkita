@@ -2,7 +2,10 @@
 // --------------------------------------------------------------------------
 // 1. Automatic Year Initialization in Footer
 // --------------------------------------------------------------------------
-document.getElementById("year").textContent = new Date().getFullYear();
+const yearElement = document.getElementById("year");
+if (yearElement) {
+  yearElement.textContent = new Date().getFullYear();
+}
 
 // --------------------------------------------------------------------------
 // 2. Innovation Projects List Data
@@ -147,6 +150,7 @@ if (projectGrid) {
         onerror="this.style.display='none'"
       >
       <div class="project-content">
+        <span class="project-number">${project.number}</span>
         <h3>${project.title}</h3>
         <p>${project.description}</p>
         <div class="project-tags">
@@ -173,6 +177,8 @@ function showProject(index) {
   const modal = document.getElementById("projectModal");
   const modalBody = document.getElementById("modalBody");
 
+  if (!project || !modal || !modalBody) return;
+
   modalBody.innerHTML = `
     <img
       src="${project.image}"
@@ -197,12 +203,16 @@ function showProject(index) {
     </div>
   `;
 
+  modal.scrollTop = 0;
   modal.classList.add("active");
   document.body.style.overflow = "hidden";
 }
 
 function closeProject() {
-  document.getElementById("projectModal").classList.remove("active");
+  const modal = document.getElementById("projectModal");
+  if (!modal) return;
+
+  modal.classList.remove("active");
   document.body.style.overflow = "";
 }
 
@@ -210,7 +220,8 @@ function closeProject() {
 // 5. Keyboard Event Listener (Close Modal with Escape Key)
 // --------------------------------------------------------------------------
 document.addEventListener("keydown", function(event) {
-  if (event.key === "Escape") {
+  const modal = document.getElementById("projectModal");
+  if (event.key === "Escape" && modal && modal.classList.contains("active")) {
     closeProject();
   }
 });
