@@ -8,8 +8,10 @@
   padding: 0;
 }
 
-html {
-  scroll-behavior: smooth;
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 body {
@@ -17,6 +19,12 @@ body {
   color: #27272a;
   line-height: 1.6;
   background: #fafafa;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #71717a;
+  outline-offset: 3px;
 }
 
 /* --------------------------------------------------------------------------
@@ -42,6 +50,11 @@ nav a {
   text-decoration: none;
   margin-left: 22px;
   font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: #ffffff;
 }
 
 .menu-toggle {
@@ -106,6 +119,11 @@ nav a {
   text-decoration: none;
   font-weight: bold;
   margin-top: 28px;
+  transition: background 0.2s ease;
+}
+
+.btn:hover {
+  background: #e4e4e7;
 }
 
 /* --------------------------------------------------------------------------
@@ -136,6 +154,12 @@ section h2 {
   border-radius: 14px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
   border: 1px solid #e4e4e7;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
 }
 
 .card h3 {
@@ -149,6 +173,15 @@ section h2 {
 
 .contact {
   background: #f4f4f5;
+}
+
+.contact .btn {
+  background: #18181b;
+  color: #ffffff;
+}
+
+.contact .btn:hover {
+  background: #3f3f46;
 }
 
 /* --------------------------------------------------------------------------
@@ -165,9 +198,7 @@ footer {
    6. Portfolio & Innovation Section
    -------------------------------------------------------------------------- */
 .innovation-section {
-  padding: 75px 8%;
   background: #ffffff;
-  font-family: Arial, Helvetica, sans-serif;
   color: #27272a;
   text-align: left;
 }
@@ -214,12 +245,14 @@ footer {
 }
 
 .project-card {
+  display: flex;
+  flex-direction: column;
   background: #ffffff;
   border-radius: 18px;
   overflow: hidden;
   border: 1px solid #e4e4e7;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
-  transition: transform .3s, box-shadow .3s;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .project-card:hover {
@@ -235,7 +268,34 @@ footer {
   background: #f4f4f5;
 }
 
+.image-fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #f4f4f5, #e4e4e7);
+  color: #52525b;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.project-image-fallback {
+  width: 100%;
+  height: 250px;
+}
+
+.modal-image-fallback {
+  width: 100%;
+  height: 240px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+}
+
 .project-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
   padding: 26px;
 }
 
@@ -277,16 +337,19 @@ footer {
 .project-button {
   display: inline-flex;
   align-items: center;
+  align-self: flex-start;
   gap: 8px;
+  margin-top: auto;
   padding: 12px 19px;
   background: #18181b;
   color: #ffffff;
   border: none;
   border-radius: 8px;
   cursor: pointer;
+  font-family: inherit;
   font-size: 13px;
   font-weight: 600;
-  transition: background .2s;
+  transition: background 0.2s;
 }
 
 .project-button:hover {
@@ -302,19 +365,20 @@ footer {
   inset: 0;
   z-index: 9999;
   padding: 25px;
-  overflow-y: auto;
 }
 
 .project-modal.active {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
 }
 
 .modal-overlay {
-  position: fixed;
+  position: absolute;
   inset: 0;
+  z-index: 1;
   background: rgba(24, 24, 27, 0.75);
+  -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
 }
 
@@ -322,12 +386,14 @@ footer {
   position: relative;
   width: 100%;
   max-width: 850px;
+  max-height: 90vh;
+  overflow-y: auto;
   margin: auto;
   padding: 35px;
   background: #ffffff;
   border-radius: 16px;
   z-index: 2;
-  animation: modalShow .3s ease;
+  animation: modalShow 0.3s ease;
   text-align: left;
 }
 
@@ -359,6 +425,11 @@ footer {
   line-height: 1;
   cursor: pointer;
   z-index: 3;
+  transition: background 0.2s ease;
+}
+
+.modal-close:hover {
+  background: #e4e4e7;
 }
 
 .modal-image {
@@ -473,13 +544,18 @@ footer {
     grid-template-columns: 1fr;
   }
 
-  section,
-  .innovation-section {
+  section {
     padding: 60px 6%;
   }
 
-  .project-image {
+  .project-image,
+  .project-image-fallback {
     height: 220px;
+  }
+
+  .modal-overlay {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
   }
 
   .modal-content {
@@ -488,5 +564,21 @@ footer {
 
   .modal-content h2 {
     font-size: 23px;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-modal {
+    padding: 12px;
+  }
+
+  .modal-content {
+    padding: 20px 14px;
+  }
+
+  .modal-content p,
+  .modal-content li {
+    font-size: 13px;
+    line-height: 1.75;
   }
 }
