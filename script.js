@@ -1,476 +1,246 @@
 
-/* --------------------------------------------------------------------------
-   1. Reset & Basic Settings
-   -------------------------------------------------------------------------- */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+// --------------------------------------------------------------------------
+// 1. Automatic Year Initialization in Footer
+// --------------------------------------------------------------------------
+document.getElementById("year").textContent = new Date().getFullYear();
 
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  color: #27272a;
-  line-height: 1.6;
-  background: #fafafa;
-}
-
-/* --------------------------------------------------------------------------
-   2. Header & Navigation
-   -------------------------------------------------------------------------- */
-header {
-  background: #18181b;
-  color: #fafafa;
-  padding: 20px 8%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo {
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.menu-toggle {
-  display: none;
-}
-
-nav a {
-  color: #d4d4d8;
-  text-decoration: none;
-  margin-left: 22px;
-  font-size: 14px;
-}
-
-/* --------------------------------------------------------------------------
-   3. Hero Section & Primary Button
-   -------------------------------------------------------------------------- */
-.hero {
-  background: linear-gradient(135deg, #18181b, #3f3f46);
-  color: #fafafa;
-  padding: 110px 8%;
-  text-align: center;
-}
-
-.hero h1 {
-  font-size: clamp(32px, 6vw, 54px);
-  margin-bottom: 18px;
-}
-
-.hero p {
-  max-width: 600px;
-  margin: auto;
-  color: #d4d4d8;
-}
-
-.btn {
-  display: inline-block;
-  background: #ffffff;
-  color: #18181b;
-  padding: 13px 25px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  margin-top: 28px;
-}
-
-/* --------------------------------------------------------------------------
-   4. General, About, Services & Contact Sections
-   -------------------------------------------------------------------------- */
-section {
-  padding: 75px 8%;
-  text-align: center;
-}
-
-section h2 {
-  font-size: 32px;
-  margin-bottom: 15px;
-  color: #18181b;
-}
-
-.cards {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 22px;
-  max-width: 850px;
-  margin: 35px auto 0;
-}
-
-.card {
-  background: #ffffff;
-  padding: 35px 25px;
-  border-radius: 14px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
-  border: 1px solid #e4e4e7;
-}
-
-.card h3 {
-  margin-bottom: 10px;
-  color: #18181b;
-}
-
-.about {
-  background: #ffffff;
-}
-
-.contact {
-  background: #f4f4f5;
-}
-
-/* --------------------------------------------------------------------------
-   5. Footer
-   -------------------------------------------------------------------------- */
-footer {
-  background: #18181b;
-  color: #fafafa;
-  text-align: center;
-  padding: 25px;
-}
-
-/* --------------------------------------------------------------------------
-   6. Portfolio & Innovation Section
-   -------------------------------------------------------------------------- */
-.innovation-section {
-  padding: 75px 8%;
-  background: #ffffff;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #27272a;
-  text-align: left;
-}
-
-.innovation-container {
-  max-width: 1200px;
-  margin: auto;
-}
-
-.innovation-header {
-  max-width: 780px;
-  margin: 0 auto 55px;
-  text-align: center;
-}
-
-.innovation-label {
-  display: inline-block;
-  padding: 9px 16px;
-  border-radius: 30px;
-  background: #f4f4f5;
-  color: #18181b;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 1px;
-}
-
-.innovation-header h2 {
-  font-size: clamp(30px, 5vw, 43px);
-  margin: 20px 0 15px;
-  color: #18181b;
-}
-
-.innovation-header p {
-  font-size: 15px;
-  line-height: 1.9;
-  color: #52525b;
-  margin: 0;
-}
-
-.innovation-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 28px;
-}
-
-.project-card {
-  background: #ffffff;
-  border-radius: 18px;
-  overflow: hidden;
-  border: 1px solid #e4e4e7;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
-  transition: transform .3s, box-shadow .3s;
-}
-
-.project-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-}
-
-.project-image {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  display: block;
-  background: #f4f4f5;
-}
-
-.project-content {
-  padding: 26px;
-}
-
-.project-number {
-  font-size: 12px;
-  font-weight: bold;
-  color: #52525b;
-  letter-spacing: 1px;
-}
-
-.project-content h3 {
-  margin: 12px 0;
-  font-size: 23px;
-  color: #18181b;
-}
-
-.project-content p {
-  font-size: 14px;
-  line-height: 1.8;
-  color: #52525b;
-}
-
-.project-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin: 18px 0;
-}
-
-.project-tags span {
-  font-size: 11px;
-  padding: 7px 11px;
-  border-radius: 20px;
-  background: #f4f4f5;
-  color: #27272a;
-  font-weight: 600;
-}
-
-.project-button {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 12px 19px;
-  background: #18181b;
-  color: #ffffff;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 13px;
-  font-weight: 600;
-  transition: background .2s;
-}
-
-.project-button:hover {
-  background: #3f3f46;
-}
-
-/* --------------------------------------------------------------------------
-   7. Project Detail Modal
-   -------------------------------------------------------------------------- */
-.project-modal {
-  display: none;
-  position: fixed;
-  inset: 0;
-  z-index: 9999;
-  padding: 25px;
-  overflow-y: auto;
-}
-
-.project-modal.active {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-}
-
-.modal-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(24, 24, 27, 0.75);
-  backdrop-filter: blur(5px);
-}
-
-.modal-content {
-  position: relative;
-  width: 100%;
-  max-width: 850px;
-  margin: auto;
-  padding: 35px;
-  background: #ffffff;
-  border-radius: 16px;
-  z-index: 2;
-  animation: modalShow .3s ease;
-  text-align: left;
-}
-
-@keyframes modalShow {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
+// --------------------------------------------------------------------------
+// 2. Innovation Projects List Data
+// --------------------------------------------------------------------------
+const projects = [
+  {
+    number: "01",
+    title: "Money Tracker AI",
+    image: "assets/images/money-tracker.jpg",
+    description: "Konsep aplikasi pengelolaan keuangan pribadi berbasis Artificial Intelligence (AI) untuk membantu pengguna mencatat, memantau, menganalisis, dan merencanakan kondisi keuangan secara lebih efektif.",
+    features: [
+      "Pencatatan pemasukan dan pengeluaran secara digital.",
+      "Kategorisasi transaksi otomatis menggunakan AI.",
+      "Analisis kebiasaan dan pola pengeluaran.",
+      "Prediksi kondisi keuangan berdasarkan riwayat transaksi.",
+      "Rekomendasi penghematan dan pengelolaan anggaran.",
+      "AI Financial Assistant untuk konsultasi keuangan.",
+      "Pemindaian struk belanja menggunakan teknologi OCR."
+    ],
+    technologies: [
+      "Flutter / React Native",
+      "Laravel / Node.js",
+      "PostgreSQL",
+      "Python",
+      "Machine Learning",
+      "OCR"
+    ],
+    innovation: "Sistem AI yang mampu menganalisis pola pengeluaran dan memberikan peringatan serta rekomendasi ketika pengguna menunjukkan kecenderungan pengeluaran yang melebihi anggaran."
+  },
+  {
+    number: "02",
+    title: "Cybersecurity Awareness",
+    image: "assets/images/cybersecurity.jpg",
+    description: "Konsep platform edukasi dan peningkatan kesadaran keamanan siber yang dirancang untuk membantu masyarakat memahami berbagai ancaman di dunia digital serta meningkatkan perlindungan data pribadi dan aktivitas digital.",
+    features: [
+      "Simulasi edukasi phishing yang aman.",
+      "Pemeriksaan indikasi tautan berbahaya.",
+      "Analisis kekuatan password secara lokal.",
+      "Materi edukasi keamanan informasi dan privasi digital.",
+      "Kuis dan tantangan cybersecurity interaktif.",
+      "Penilaian tingkat kesadaran keamanan digital.",
+      "Dashboard perkembangan pembelajaran pengguna."
+    ],
+    technologies: [
+      "React / Next.js",
+      "Python / FastAPI",
+      "PostgreSQL",
+      "Security Analysis Tools",
+      "Threat Intelligence API"
+    ],
+    innovation: "Sistem pembelajaran keamanan siber adaptif yang mampu menyesuaikan materi edukasi berdasarkan hasil evaluasi dan tingkat pemahaman pengguna."
+  },
+  {
+    number: "03",
+    title: "Smart Learning",
+    image: "assets/images/smart-learning.jpg",
+    description: "Konsep platform pembelajaran digital berbasis Artificial Intelligence untuk menghadirkan pengalaman belajar yang lebih interaktif, personal, dan adaptif melalui dukungan AI sebagai asisten pembelajaran.",
+    features: [
+      "AI Tutor untuk menjawab pertanyaan pembelajaran.",
+      "Pembuatan soal latihan secara otomatis.",
+      "Rekomendasi materi berdasarkan kemampuan pengguna.",
+      "Analisis perkembangan dan hasil belajar.",
+      "Pembuatan ringkasan materi secara otomatis.",
+      "Flashcard dan kuis pembelajaran interaktif.",
+      "Rekomendasi topik yang perlu dipelajari kembali."
+    ],
+    technologies: [
+      "Next.js / Flutter",
+      "Python",
+      "LLM API",
+      "PostgreSQL",
+      "Vector Database"
+    ],
+    innovation: "AI yang mampu membangun jalur pembelajaran personal berdasarkan kemampuan, kebutuhan, dan perkembangan masing-masing pengguna."
+  },
+  {
+    number: "04",
+    title: "Early Warning System",
+    image: "assets/images/early-warning.jpg",
+    description: "Konsep platform pemantauan dan peringatan dini bencana berbasis Internet of Things (IoT) dan kecerdasan buatan untuk memantau kondisi lingkungan serta membantu masyarakat memperoleh informasi potensi bencana.",
+    features: [
+      "Monitoring tinggi permukaan air secara real-time.",
+      "Integrasi sensor curah hujan.",
+      "Pemantauan kondisi lingkungan.",
+      "Dashboard pemantauan data secara langsung.",
+      "Notifikasi peringatan melalui aplikasi.",
+      "Pemetaan lokasi rawan bencana.",
+      "Analisis tren kenaikan permukaan air.",
+      "Riwayat kejadian dan laporan kondisi lingkungan."
+    ],
+    technologies: [
+      "ESP32",
+      "Sensor Ultrasonik",
+      "Sensor Hujan",
+      "MQTT",
+      "Python",
+      "Firebase / PostgreSQL",
+      "Web GIS"
+    ],
+    innovation: "Integrasi data sensor IoT, pemetaan digital, dan analisis tren untuk membantu mengidentifikasi potensi kondisi berbahaya serta mendukung penyampaian informasi peringatan dini kepada masyarakat."
+  },
+  {
+    number: "05",
+    title: "Pasar Digital Lokal",
+    image: "assets/images/pasar-digital.jpg",
+    description: "Konsep platform marketplace digital yang menghubungkan pelaku UMKM, produsen lokal, pedagang, dan konsumen dalam satu ekosistem perdagangan digital untuk memperluas jangkauan pemasaran produk lokal.",
+    features: [
+      "Pembuatan dan pengelolaan toko online UMKM.",
+      "Katalog produk lokal secara digital.",
+      "Pencarian produk berdasarkan lokasi.",
+      "Pemesanan dan pembayaran digital.",
+      "Rekomendasi produk menggunakan AI.",
+      "Dashboard pengelolaan dan analisis penjualan.",
+      "Integrasi informasi pengiriman lokal.",
+      "Sistem rating dan ulasan pelanggan."
+    ],
+    technologies: [
+      "Next.js / Flutter",
+      "Laravel / Node.js",
+      "MySQL / PostgreSQL",
+      "Recommendation System",
+      "Payment Gateway",
+      "Maps API"
+    ],
+    innovation: "Marketplace berbasis potensi dan karakteristik daerah yang mengintegrasikan pencarian produk lokal, rekomendasi cerdas, dan informasi lokasi untuk memperluas akses pasar UMKM."
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+];
+
+// --------------------------------------------------------------------------
+// 3. Render Project Cards into Grid
+// --------------------------------------------------------------------------
+const projectGrid = document.getElementById("projectGrid");
+
+if (projectGrid) {
+  projectGrid.innerHTML = projects.map((project, index) => `
+    <article class="project-card">
+      <img
+        class="project-image"
+        src="${project.image}"
+        alt="${project.title}"
+        loading="lazy"
+        onerror="this.style.display='none'"
+      >
+      <div class="project-content">
+        <h3>${project.title}</h3>
+        <p>${project.description}</p>
+        <div class="project-tags">
+          ${project.technologies.slice(0, 3)
+            .map(tech => `<span>${tech}</span>`)
+            .join("")}
+        </div>
+        <button
+          class="project-button"
+          onclick="showProject(${index})"
+        >
+          Lihat Detail <span>→</span>
+        </button>
+      </div>
+    </article>
+  `).join("");
 }
 
-.modal-close {
-  position: sticky;
-  float: right;
-  top: 10px;
-  border: none;
-  background: #f4f4f5;
-  color: #18181b;
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  font-size: 25px;
-  cursor: pointer;
-  z-index: 3;
+// --------------------------------------------------------------------------
+// 4. Project Detail Modal Controls (Open & Close)
+// --------------------------------------------------------------------------
+function showProject(index) {
+  const project = projects[index];
+  const modal = document.getElementById("projectModal");
+  const modalBody = document.getElementById("modalBody");
+
+  modalBody.innerHTML = `
+    <img
+      src="${project.image}"
+      alt="${project.title}"
+      class="modal-image"
+      onerror="this.style.display='none'"
+    >
+    <h2>${project.title}</h2>
+    <h3>Deskripsi Proyek</h3>
+    <p>${project.description}</p>
+    <h3>Fitur dan Pengembangan</h3>
+    <ul>
+      ${project.features.map(feature => `<li>${feature}</li>`).join("")}
+    </ul>
+    <h3>Teknologi yang Digunakan</h3>
+    <div class="modal-tech">
+      ${project.technologies.map(tech => `<span>${tech}</span>`).join("")}
+    </div>
+    <div class="innovation-highlight">
+      <h3>Inovasi Utama</h3>
+      <p>${project.innovation}</p>
+    </div>
+  `;
+
+  modal.classList.add("active");
+  document.body.style.overflow = "hidden";
 }
 
-.modal-image {
-  width: 100%;
-  max-height: 350px;
-  object-fit: cover;
-  border-radius: 12px;
-  margin-bottom: 25px;
+function closeProject() {
+  document.getElementById("projectModal").classList.remove("active");
+  document.body.style.overflow = "";
 }
 
-.modal-content h2 {
-  font-size: 28px;
-  color: #18181b;
-  margin: 15px 0;
-}
-
-.modal-content h3 {
-  font-size: 17px;
-  color: #18181b;
-  margin-top: 28px;
-}
-
-.modal-content p,
-.modal-content li {
-  font-size: 14px;
-  line-height: 1.9;
-  color: #52525b;
-}
-
-.modal-content ul {
-  padding-left: 20px;
-}
-
-.modal-tech {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 9px;
-  margin-top: 15px;
-}
-
-.modal-tech span {
-  background: #f4f4f5;
-  color: #27272a;
-  border-radius: 6px;
-  padding: 9px 13px;
-  font-size: 12px;
-  font-weight: 600;
-}
-
-.innovation-highlight {
-  margin-top: 25px;
-  padding: 22px;
-  background: #f4f4f5;
-  border-left: 4px solid #18181b;
-  border-radius: 8px;
-}
-
-.innovation-highlight h3 {
-  margin: 0 0 8px;
-}
-
-.innovation-highlight p {
-  margin: 0;
-}
-
-/* --------------------------------------------------------------------------
-   8. Responsive Design (Media Queries)
-   -------------------------------------------------------------------------- */
-@media (max-width: 768px) {
-  header {
-    padding: 18px 5%;
-    position: relative;
+// --------------------------------------------------------------------------
+// 5. Keyboard Event Listener (Close Modal with Escape Key)
+// --------------------------------------------------------------------------
+document.addEventListener("keydown", function(event) {
+  if (event.key === "Escape") {
+    closeProject();
   }
+});
 
-  .menu-toggle {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 26px;
-    height: 18px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-  }
+// --------------------------------------------------------------------------
+// 6. Mobile Navigation Menu Toggle
+// --------------------------------------------------------------------------
+const menuToggle = document.getElementById("menuToggle");
+const navMenu = document.getElementById("navMenu");
 
-  .menu-toggle span {
-    display: block;
-    width: 100%;
-    height: 2.5px;
-    background: #fafafa;
-    border-radius: 2px;
-  }
+if (menuToggle && navMenu) {
+  menuToggle.addEventListener("click", function() {
+    const isActive = navMenu.classList.toggle("active");
+    menuToggle.classList.toggle("active", isActive);
+    menuToggle.setAttribute("aria-expanded", isActive);
+  });
 
-  nav {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background: #18181b;
-    flex-direction: column;
-    padding: 10px 5% 18px;
-    border-top: 1px solid #27272a;
-    z-index: 1000;
-  }
+  navMenu.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", function() {
+      navMenu.classList.remove("active");
+      menuToggle.classList.remove("active");
+      menuToggle.setAttribute("aria-expanded", "false");
+    });
+  });
 
-  nav.active {
-    display: flex;
-  }
-
-  nav a {
-    margin-left: 0;
-    padding: 12px 0;
-    font-size: 14px;
-    border-bottom: 1px solid #27272a;
-  }
-
-  nav a:last-child {
-    border-bottom: none;
-  }
-
-  .hero {
-    padding: 85px 6%;
-  }
-
-  .cards,
-  .innovation-grid {
-    grid-template-columns: 1fr;
-  }
-
-  section,
-  .innovation-section {
-    padding: 60px 6%;
-  }
-
-  .project-image {
-    height: 220px;
-  }
-
-  .modal-content {
-    padding: 23px 18px;
-  }
-
-  .modal-content h2 {
-    font-size: 23px;
-  }
+  document.addEventListener("click", function(event) {
+    if (!menuToggle.contains(event.target) && !navMenu.contains(event.target)) {
+      navMenu.classList.remove("active");
+      menuToggle.classList.remove("active");
+      menuToggle.setAttribute("aria-expanded", "false");
+    }
+  });
 }
