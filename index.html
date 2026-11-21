@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -12,7 +13,7 @@
   <!-- ==========================================================================
        SEO & SEARCH ENGINE VERIFICATION
        ========================================================================== -->
-  <meta name="google-site-verification" content="Z0i1XWmFOax-xjAQIHUumArBtjG56PJtRF6fUWb_oAQ" />
+  <meta name="google-site-verification" content="Z0i1XWmFOax-xjAQIHUumArBtjG56PJtRF6fUWb_oAQ">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://ruangkita-4u.pages.dev/">
 
@@ -38,10 +39,20 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebSite",
+    "@type": "WebPage",
     "name": "RuangKita",
     "url": "https://ruangkita-4u.pages.dev/",
-    "description": "RuangKita - Ide sederhana, langkah luar biasa."
+    "description": "RuangKita - Ide sederhana, langkah luar biasa.",
+    "inLanguage": "id",
+    "publisher": {
+      "@type": "Organization",
+      "name": "RuangKita",
+      "url": "https://ruangkita-4u.pages.dev/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://ruangkita-4u.pages.dev/logo.png"
+      }
+    }
   }
   </script>
 
@@ -57,7 +68,14 @@
        ========================================================================== -->
   <header>
     <div class="logo">RuangKita.</div>
-    <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu" aria-expanded="false">
+    <button
+      type="button"
+      class="menu-toggle"
+      id="menuToggle"
+      aria-label="Toggle Menu"
+      aria-expanded="false"
+      aria-controls="navMenu"
+    >
       <span></span>
       <span></span>
       <span></span>
@@ -138,10 +156,16 @@
   <!-- ==========================================================================
        PROJECT DETAIL POPUP MODAL
        ========================================================================== -->
-  <div class="project-modal" id="projectModal" role="dialog" aria-modal="true">
-    <div class="modal-overlay" onclick="closeProject()"></div>
+  <div
+    class="project-modal"
+    id="projectModal"
+    role="dialog"
+    aria-modal="true"
+    aria-hidden="true"
+  >
+    <div class="modal-overlay" id="modalOverlay"></div>
     <div class="modal-content">
-      <button class="modal-close" onclick="closeProject()" aria-label="Tutup">&times;</button>
+      <button type="button" class="modal-close" id="modalClose" aria-label="Tutup">&times;</button>
       <div id="modalBody"></div>
     </div>
   </div>
@@ -154,7 +178,7 @@
   </footer>
 
   <!-- ==========================================================================
-       MAIN JAVASCRIPT
+       MAIN JAVASCRIPT (Pastikan nama file menggunakan huruf kecil: script.js)
        ========================================================================== -->
   <script src="script.js"></script>
 
