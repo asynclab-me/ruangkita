@@ -18,7 +18,7 @@
 
 ## 📖 Tentang Project
 
-**RuangKita** adalah website *landing page* single-page yang dirancang dengan pendekatan minimalis, modern, ringan, dan responsif. Dibangun menggunakan teknologi web fundamental tanpa *framework* tambahan untuk memastikan kecepatan akses maksimal dan optimasi mesin pencari (SEO) yang optimal.
+**RuangKita** adalah website *landing page* single-page yang dirancang dengan pendekatan minimalis, modern, ringan, dan responsif. Dibangun menggunakan teknologi web fundamental tanpa *framework* tambahan untuk memastikan kecepatan akses maksimal, struktur kode yang modular, serta optimasi mesin pencari (SEO) yang optimal.
 
 🔗 **Alamat Resmi:** [https://ruangkita-4u.pages.dev/](https://ruangkita-4u.pages.dev/)
 
@@ -26,9 +26,10 @@
 
 ## ✨ Fitur Utama
 
-- **📱 Fully Responsive Design** — Tata letak otomatis menyesuaikan layar *mobile*, tablet, hingga desktop.
-- **⚡ Ultra-Lightweight** — Dibangun dengan HTML, CSS, dan JavaScript murni tanpa dependensi eksternal sehingga *loading* instan.
-- **🧭 Smooth Single-Page Navigation** — Navigasi halus antar bagian (`#home`, `#about`, `#services`, `#contact`).
+- **📱 Fully Responsive Design & Mobile Navigation** — Tata letak otomatis menyesuaikan layar *mobile*, tablet, hingga desktop, dilengkapi tombol *hamburger menu* interaktif pada layar kecil.
+- **⚡ Ultra-Lightweight & Modular** — Dibangun dengan HTML, CSS, dan JavaScript murni yang terpisah secara rapi tanpa dependensi eksternal sehingga *loading* instan.
+- **🧭 Smooth Single-Page Navigation** — Navigasi halus antar bagian (`#home`, `#about`, `#services`, `#innovation`, `#contact`).
+- **💡 Showcase Karya & Inovasi Interaktif** — Menampilkan daftar konsep dan gagasan inovasi digital secara dinamis lengkap dengan *popup modal* detail proyek (deskripsi, fitur, teknologi yang digunakan, dan inovasi utama).
 - **🔍 SEO & Search Engine Ready** — Dilengkapi tag *canonical*, Open Graph, JSON-LD Structured Data, `robots.txt`, dan `sitemap.xml`.
 - **☁️ Automated CI/CD Deployment** — Terintegrasi langsung dengan **Cloudflare Pages** untuk pembaruan otomatis setiap kali ada perubahan kode.
 
@@ -38,9 +39,9 @@
 
 | Teknologi | Peran & Fungsi |
 | :--- | :--- |
-| **HTML5** | Struktur semantik halaman dan metadata SEO |
-| **CSS3** | Styling modern, CSS Grid, Flexbox, dan *responsive media queries* |
-| **JavaScript (ES6)** | Pembaruan tahun hak cipta dinamis dan interaktivitas ringan |
+| **HTML5** | Struktur semantik halaman, elemen modal, dan metadata SEO |
+| **CSS3** | Styling modern, CSS Grid, Flexbox, animasi modal & menu navigasi, serta *responsive media queries* |
+| **JavaScript (ES6)** | Rendering dinamis kartu proyek, kontrol *popup modal* (klik & tombol `Escape`), *toggle* menu *mobile*, dan tahun hak cipta otomatis |
 | **Cloudflare Pages** | Hosting statis dengan jaringan CDN global dan SSL otomatis |
 
 ---
@@ -49,12 +50,17 @@
 
 ```text
 RuangKita/
-├── index.html      # Halaman utama single-page
-├── robots.txt      # Instruksi crawling untuk mesin pencari
-├── sitemap.xml     # Peta situs resmi untuk Google Search Console
-├── LICENSE         # Dokumen lisensi MIT
-├── .gitignore      # Daftar file/folder yang diabaikan Git
-└── README.md       # Dokumentasi utama repository
+├── assets/
+│   └── images/         # Aset gambar untuk masing-masing proyek inovasi
+├── index.html          # Halaman utama single-page
+├── style.css           # Stylesheet utama dan aturan responsive design
+├── script.js           # Logika data proyek, modal interaktif, dan navigasi mobile
+├── logo.png            # Favicon dan gambar pratinjau Open Graph
+├── robots.txt          # Instruksi crawling untuk mesin pencari
+├── sitemap.xml         # Peta situs resmi untuk Google Search Console
+├── LICENSE             # Dokumen lisensi MIT
+├── .gitignore          # Daftar file/folder yang diabaikan Git
+└── README.md           # Dokumentasi utama repository
 ```
 
 ---
@@ -94,7 +100,9 @@ Website ini di-host secara gratis menggunakan **Cloudflare Pages** yang terhubun
 ## 🔮 Roadmap Pengembangan
 
 - [x] Desain dan struktur *landing page* single-page responsif
-- [x] Navigasi antar-section (`Home`, `Tentang`, `Layanan`, `Kontak`)
+- [x] Pemisahan struktur kode modular (`index.html`, `style.css`, `script.js`)
+- [x] Navigasi antar-section (`Home`, `Tentang`, `Layanan`, `Inovasi`, `Kontak`) dengan *hamburger menu* responsif
+- [x] Section Karya & Inovasi dinamis beserta *popup modal* detail proyek
 - [x] Optimasi SEO dasar, Open Graph, dan Schema.org
 - [x] Integrasi hosting dengan Cloudflare Pages
 - [ ] Penambahan formulir kontak interaktif
