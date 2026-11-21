@@ -45,7 +45,7 @@ nav a {
 }
 
 /* --------------------------------------------------------------------------
-   3. Hero Section & Main Button
+   3. Hero Section & Primary Button
    -------------------------------------------------------------------------- */
 .hero {
   background: linear-gradient(135deg, #18181b, #3f3f46);
@@ -77,7 +77,7 @@ nav a {
 }
 
 /* --------------------------------------------------------------------------
-   4. General Sections, About, Services & Contact
+   4. General, About, Services & Contact Sections
    -------------------------------------------------------------------------- */
 section {
   padding: 75px 8%;
@@ -134,9 +134,9 @@ footer {
    -------------------------------------------------------------------------- */
 .innovation-section {
   padding: 75px 8%;
-  background: #f7f9fc;
+  background: #ffffff;
   font-family: Arial, Helvetica, sans-serif;
-  color: #202938;
+  color: #27272a;
   text-align: left;
 }
 
@@ -155,8 +155,8 @@ footer {
   display: inline-block;
   padding: 9px 16px;
   border-radius: 30px;
-  background: #e8f0ff;
-  color: #2457c5;
+  background: #f4f4f5;
+  color: #18181b;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 1px;
@@ -165,13 +165,13 @@ footer {
 .innovation-header h2 {
   font-size: clamp(30px, 5vw, 43px);
   margin: 20px 0 15px;
-  color: #15233b;
+  color: #18181b;
 }
 
 .innovation-header p {
   font-size: 15px;
   line-height: 1.9;
-  color: #647084;
+  color: #52525b;
   margin: 0;
 }
 
@@ -185,14 +185,14 @@ footer {
   background: #ffffff;
   border-radius: 18px;
   overflow: hidden;
-  border: 1px solid #e8edf4;
-  box-shadow: 0 8px 30px rgba(20, 40, 80, 0.05);
+  border: 1px solid #e4e4e7;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
   transition: transform .3s, box-shadow .3s;
 }
 
 .project-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 15px 35px rgba(20, 40, 80, 0.12);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
 }
 
 .project-image {
@@ -200,7 +200,7 @@ footer {
   height: 250px;
   object-fit: cover;
   display: block;
-  background: #e9eef5;
+  background: #f4f4f5;
 }
 
 .project-content {
@@ -210,20 +210,20 @@ footer {
 .project-number {
   font-size: 12px;
   font-weight: bold;
-  color: #2863d5;
+  color: #52525b;
   letter-spacing: 1px;
 }
 
 .project-content h3 {
   margin: 12px 0;
   font-size: 23px;
-  color: #192a45;
+  color: #18181b;
 }
 
 .project-content p {
   font-size: 14px;
   line-height: 1.8;
-  color: #68758a;
+  color: #52525b;
 }
 
 .project-tags {
@@ -237,8 +237,8 @@ footer {
   font-size: 11px;
   padding: 7px 11px;
   border-radius: 20px;
-  background: #eef3ff;
-  color: #315bb1;
+  background: #f4f4f5;
+  color: #27272a;
   font-weight: 600;
 }
 
@@ -247,7 +247,7 @@ footer {
   align-items: center;
   gap: 8px;
   padding: 12px 19px;
-  background: #2457c5;
+  background: #18181b;
   color: #ffffff;
   border: none;
   border-radius: 8px;
@@ -258,7 +258,7 @@ footer {
 }
 
 .project-button:hover {
-  background: #173e97;
+  background: #3f3f46;
 }
 
 /* --------------------------------------------------------------------------
@@ -282,7 +282,7 @@ footer {
 .modal-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(10, 20, 40, .75);
+  background: rgba(24, 24, 27, 0.75);
   backdrop-filter: blur(5px);
 }
 
@@ -315,8 +315,8 @@ footer {
   float: right;
   top: 10px;
   border: none;
-  background: #edf1f7;
-  color: #26364d;
+  background: #f4f4f5;
+  color: #18181b;
   width: 38px;
   height: 38px;
   border-radius: 50%;
@@ -335,13 +335,13 @@ footer {
 
 .modal-content h2 {
   font-size: 28px;
-  color: #192a45;
+  color: #18181b;
   margin: 15px 0;
 }
 
 .modal-content h3 {
   font-size: 17px;
-  color: #2457c5;
+  color: #18181b;
   margin-top: 28px;
 }
 
@@ -349,7 +349,7 @@ footer {
 .modal-content li {
   font-size: 14px;
   line-height: 1.9;
-  color: #647084;
+  color: #52525b;
 }
 
 .modal-content ul {
@@ -364,8 +364,8 @@ footer {
 }
 
 .modal-tech span {
-  background: #eef3ff;
-  color: #315bb1;
+  background: #f4f4f5;
+  color: #27272a;
   border-radius: 6px;
   padding: 9px 13px;
   font-size: 12px;
@@ -375,8 +375,8 @@ footer {
 .innovation-highlight {
   margin-top: 25px;
   padding: 22px;
-  background: #f0f5ff;
-  border-left: 4px solid #2457c5;
+  background: #f4f4f5;
+  border-left: 4px solid #18181b;
   border-radius: 8px;
 }
 
