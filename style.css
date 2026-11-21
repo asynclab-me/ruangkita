@@ -23,6 +23,7 @@ body {
    2. Header & Navigation
    -------------------------------------------------------------------------- */
 header {
+  position: relative;
   background: #18181b;
   color: #fafafa;
   padding: 20px 8%;
@@ -41,6 +42,38 @@ nav a {
   text-decoration: none;
   margin-left: 22px;
   font-size: 14px;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #fafafa;
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.menu-toggle.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
 }
 
 /* --------------------------------------------------------------------------
@@ -310,9 +343,12 @@ footer {
 }
 
 .modal-close {
-  position: sticky;
-  float: right;
-  top: 10px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: none;
   background: #f4f4f5;
   color: #18181b;
@@ -320,6 +356,7 @@ footer {
   height: 38px;
   border-radius: 50%;
   font-size: 25px;
+  line-height: 1;
   cursor: pointer;
   z-index: 3;
 }
@@ -395,9 +432,36 @@ footer {
     padding: 18px 5%;
   }
 
+  .menu-toggle {
+    display: flex;
+  }
+
+  nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #18181b;
+    flex-direction: column;
+    padding: 10px 5% 18px;
+    border-top: 1px solid #27272a;
+    z-index: 1000;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
   nav a {
-    margin-left: 10px;
-    font-size: 12px;
+    margin-left: 0;
+    padding: 12px 0;
+    font-size: 14px;
+    border-bottom: 1px solid #27272a;
+  }
+
+  nav a:last-child {
+    border-bottom: none;
   }
 
   .hero {
